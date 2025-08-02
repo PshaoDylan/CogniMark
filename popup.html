@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CogniMark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">CogniMark</h1>
+            <p class="slogan">您的智能书签导航器</p>
+        </header>
+
+        <div class="main-content">
+            <div class="search-section">
+                <div class="search-input-wrapper">
+                    <input type="text" id="searchInput" placeholder="搜索标题、URL、或全文快照..." class="search-input">
+                </div>
+                <div id="searchHistory" class="search-history"></div>
+                <div class="search-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="regexMode"> 正则
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="fullTextMode"> 搜快照
+                    </label>
+                </div>
+            </div>
+
+            <div class="quick-access">
+                <h3>常用书签</h3>
+                <div id="frequentBookmarks" class="frequent-bookmarks-list"></div>
+            </div>
+
+            <div class="stats-and-controls">
+                <div id="stats" class="stats"></div>
+                <div class="controls">
+                    <button id="syncBtn" class="control-btn" title="立即同步">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                        <span>同步</span>
+                    </button>
+                    <button id="healthCheckBtn" class="control-btn" title="健康检查">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heartbeat"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        <span>检查</span>
+                    </button>
+                    <button id="exportBtn" class="control-btn" title="导出CSV">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        <span>导出</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bookmarks-container">
+                <div id="bookmarksList" class="bookmarks-list"></div>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p>未找到匹配的书签。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
