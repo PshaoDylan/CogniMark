@@ -134,7 +134,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 160px; /* Adjusted size */
+  min-height: 128px; /* Adjusted size */
 }
 
 .input-area {
