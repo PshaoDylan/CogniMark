@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>二维码生成器</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <button class="tab-button active" data-tab="tab-url">当前页面</button>
+      <button class="tab-button" data-tab="tab-custom">自定义内容</button>
+    </div>
+
+    <div id="tab-url" class="tab-content active">
+      <div id="qrcode-url" class="qrcode-container"></div>
+    </div>
+
+    <div id="tab-custom" class="tab-content">
+      <textarea id="custom-text" placeholder="输入文本内容..."></textarea>
+      <div class="settings">
+        <label for="qr-size">尺寸:</label>
+        <input type="number" id="qr-size" value="256" min="64" max="512">
+        <label for="qr-level">纠错级别:</label>
+        <select id="qr-level">
+          <option value="L">L (7%)</option>
+          <option value="M" selected>M (15%)</option>
+          <option value="Q">Q (25%)</option>
+          <option value="H">H (30%)</option>
+        </select>
+      </div>
+      <div id="qrcode-custom" class="qrcode-container"></div>
+    </div>
+
+    <div class="actions">
+      <button id="copy-btn">复制</button>
+      <button id="download-btn">下载</button>
+    </div>
+  </div>
+
+  <script src="qrcode.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
