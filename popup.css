@@ -1,14 +1,20 @@
 :root {
-  --primary-color: #007aff;
-  --background-color: #f0f0f7;
+  --primary-color: #28a745; /* Green for success/generation */
+  --primary-color-hover: #218838;
+  --background-color: #f4f5f7;
   --card-background-color: #ffffff;
-  --item-background-color: #f8f9fa;
-  --text-color: #1d1d1f;
-  --text-color-light: #6e6e73;
-  --border-color: #e5e5e5;
+  --item-background-color: #ffffff;
+  --text-color: #212529;
+  --text-color-light: #6c757d;
+  --border-color: #e9ecef;
   --border-radius-lg: 16px;
   --border-radius-md: 12px;
-  --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 body {
@@ -23,21 +29,27 @@ body {
   background-color: var(--card-background-color);
   display: flex;
   flex-direction: column;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin: 1rem;
 }
 
 .card-header {
   padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .card-header h1 {
   margin: 0;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
+  color: var(--text-color);
 }
 
 .card-body {
-  padding: 0 1.25rem 1.25rem 1.25rem;
+  padding: 1.25rem;
 }
 
 .bento-grid {
@@ -50,18 +62,16 @@ body {
   border-radius: var(--border-radius-md);
   padding: 1rem;
   border: 1px solid var(--border-color);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.bento-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .tabs {
   display: flex;
   padding: 0;
-  grid-column: 1 / -1; /* Span full width */
+  grid-column: 1 / -1;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
 }
 
 .tab-button {
@@ -73,24 +83,15 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-color-light);
-  border-radius: 8px;
-  transition: background-color 0.2s, color 0.2s;
-  position: relative;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .tab-button.active {
-  color: var(--primary-color);
-}
-
-.tab-button.active::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 10%;
-  right: 10%;
-  height: 2px;
   background-color: var(--primary-color);
-  border-radius: 1px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+  transform: scale(1.05);
 }
 
 .tab-content {
@@ -102,6 +103,7 @@ body {
 
 .tab-content.active {
   display: grid;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 .qr-display {
@@ -110,7 +112,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  padding: 1.5rem;
 }
 
 .qr-display p {
@@ -125,7 +126,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 200px;
+  min-height: 180px; /* Adjusted size */
 }
 
 .input-area {
@@ -136,19 +137,19 @@ textarea {
   width: 100%;
   box-sizing: border-box;
   padding: 0.75rem;
-  border: none;
   border-radius: var(--border-radius-md);
   font-size: 1rem;
-  background-color: white;
+  background-color: #f8f9fa;
+  border: 1px solid var(--border-color);
   resize: vertical;
   min-height: 80px;
-  border: 1px solid var(--border-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
 }
 
 .settings {
@@ -168,7 +169,7 @@ textarea:focus {
 .form-group label {
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--text-color-light);
+  color: var(--text-color);
   margin-left: 0.25rem;
 }
 
@@ -179,21 +180,21 @@ select, input[type="number"] {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-md);
   font-size: 1rem;
-  background-color: white;
+  background-color: #f8f9fa;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 select:focus, input[type="number"]:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
 }
 
 .card-footer {
   display: flex;
   padding: 1.25rem;
-  background-color: var(--card-background-color);
+  background-color: transparent;
   gap: 1rem;
-  border-top: 1px solid #f0f0f7;
 }
 
 .card-footer button {
@@ -216,13 +217,16 @@ select:focus, input[type="number"]:focus {
   color: white;
 }
 .button-primary:hover {
-  opacity: 0.85;
+  background-color: var(--primary-color-hover);
+  box-shadow: 0 6px 16px rgba(40, 167, 69, 0.3);
+  transform: translateY(-2px);
 }
 
 .button-secondary {
-  background-color: #e5e5e5;
+  background-color: #e9ecef;
   color: var(--text-color);
 }
 .button-secondary:hover {
-  background-color: #d8d8d8;
+  background-color: #dee2e6;
+  transform: translateY(-2px);
 }

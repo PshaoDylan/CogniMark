@@ -1,48 +1,48 @@
 # QR-ify 🚀
 
-QR-ify is a simple and powerful Chrome extension that allows you to instantly generate QR codes from any content. Whether it's the current webpage URL or custom text, QR-ify makes it easy to create, copy, and download QR codes on the fly.
+QR-ify 是一个简洁而强大的 Chrome 扩展程序，可以让你轻松地将任何内容即时生成二维码。无论是当前页面的网址还是自定义的文本，QR-ify 都能让你轻松地创建、复制和下载二维码。
 
-The name "QR-ify" comes from the idea of instantly turning anything into a QR code.
+"QR-ify" 的名字来源于将任何内容（-ify）即时转换为二维码（QR）的想法。
 
-## ✨ Features
+## ✨ 功能特性
 
-- **Instant URL to QR Code**: Automatically generates a QR code for the current page's URL when you open the extension.
-- **Custom Text Support**: Switch to the "Custom Content" tab to type or paste any text and generate a QR code for it.
-- **Real-time Generation**: The QR code for custom text is generated as you type.
-- **Customizable Options**:
-  - **Size**: Adjust the size of the QR code (in pixels).
-  - **Error Correction**: Choose from four levels of error correction (Low, Medium, High, Highest) to ensure scannability.
-- **Easy Actions**:
-  - **Copy to Clipboard**: Copy the generated QR code image to your clipboard with a single click.
-  - **Download as PNG**: Download the QR code as a high-quality PNG file.
-- **Modern UI**: A clean, beautiful, and easy-to-use card-style interface.
+- **即时网址转二维码**：打开扩展时，自动为当前页面的URL生成一个二维码。
+- **支持自定义文本**：切换到“自定义内容”标签页，可以输入或粘贴任何文本来生成二维码。
+- **实时生成**：在你输入自定义文本时，二维码会实时更新。
+- **可自定义选项**：
+  - **尺寸**：自由调整二维码图片的大小（单位：像素）。
+  - **纠错级别**：提供四种纠错级别（低、中、较高、高），以确保二维码在各种情况下都能被轻松扫描。
+- **便捷的操作**：
+  - **复制到剪贴板**：一键将生成的二维码图片复制到剪贴板。
+  - **下载为PNG**：将二维码下载为高质量的PNG图片。
+- **现代化界面**：一个干净、美观且易于使用的卡片式界面。
 
-## 🛠️ How to Use
+## 🛠️ 如何使用
 
-1.  **Install the Extension**: Follow the installation steps below.
-2.  **Click the Icon**: Click the QR-ify icon in your Chrome toolbar.
-3.  **Generate for URL**: By default, you will see the QR code for the current page.
-4.  **Generate for Custom Text**:
-    - Click the "Custom Content" (自定义内容) tab.
-    - Type or paste your desired text into the text area.
-    - Adjust the size and error correction level if needed. The QR code will update automatically.
-5.  **Copy or Download**: Use the "Copy Image" (复制图片) or "Download PNG" (下载 PNG) buttons at the bottom.
+1.  **安装扩展**：请参考下方的安装步骤。
+2.  **点击图标**：在你的 Chrome 浏览器工具栏中点击 QR-ify 的图标。
+3.  **生成网址二维码**：默认情况下，你会看到当前页面的二维码。
+4.  **生成自定义文本二维码**：
+    - 点击“自定义内容”标签页。
+    - 在文本框中输入或粘贴你想要的文本。
+    - 如果需要，可以调整尺寸和纠错级别，二维码将会自动更新。
+5.  **复制或下载**：使用底部的“复制图片”或“下载 PNG”按钮。
 
-## ⚙️ Installation for Development
+## ⚙️ 开发安装指南
 
-To install and test the extension locally:
+如需在本地安装和测试此扩展：
 
-1.  **Download the Code**: Clone this repository or download it as a ZIP file and unzip it.
+1.  **下载代码**：克隆此仓库或下载 ZIP 压缩包并解压。
     ```bash
     git clone <repository-url>
     ```
-2.  **Open Chrome Extensions**: Navigate to `chrome://extensions` in your Chrome browser.
-3.  **Enable Developer Mode**: Turn on the "Developer mode" toggle, usually found in the top-right corner.
-4.  **Load the Extension**:
-    - Click the "Load unpacked" button.
-    - Select the directory where you cloned or unzipped the project files.
-5.  **Done!**: The QR-ify icon will appear in your browser's toolbar.
+2.  **打开扩展程序页面**：在 Chrome 浏览器中访问 `chrome://extensions`。
+3.  **启用开发者模式**：打开页面右上角的“开发者模式”开关。
+4.  **加载扩展**：
+    - 点击“加载已解压的扩展程序”按钮。
+    - 选择你克隆或解压的项目文件所在的目录。
+5.  **完成**：QR-ify 的图标将会出现在你的浏览器工具栏中。
 
-## 📄 License
+## 📄 开源协议
 
-This project is open-source and available under the [MIT License](LICENSE).
+本项目基于 [MIT 许可证](LICENSE) 开源。
