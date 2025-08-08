@@ -1,255 +1,48 @@
-# CogniMark - 您的智能书签导航器 🚀
-
-**CogniMark** 不仅仅是一个书签管理器；它是一个旨在帮助您轻松导航数字知识库的智能助手。它能将您杂乱无章的链接集合，转变成一个有组织、可搜索、且富有洞察力的知识图书馆。
-
-## ✨ 核心功能
-
-### 🧠 智能搜索与分析
-
-* **全文搜索**：超越标题和URL的限制，支持书签内容的深度搜索
-* **智能分类**：基于页面内容自动分析和分类书签
-* **关键词提取**：自动提取页面关键信息，便于快速检索
-* **正则表达式支持**：为高级用户提供强大的搜索能力
-
-### ⚡ 即时访问与统计
-
-* **常用书签**：智能推荐最常访问的书签
-* **使用统计**：追踪书签点击频率和使用模式
-* **快速访问**：一键打开常用书签，支持键盘快捷键
-* **搜索历史**：保存最近的搜索记录，快速重复查询
-
-### ❤️ 健康检查与维护
-
-* **链接状态监控**：自动扫描书签，检测失效或重定向链接
-* **状态可视化**：清晰显示每个链接的健康状态（❤️ 健康, ❌ 失效, ➡️ 重定向）
-* **批量清理**：一键清理失效书签，保持收藏夹整洁
-* **定期检查**：后台定时检查，确保书签库始终最新
-
-### 📸 页面分析与快照
-
-* **内容分析**：提取页面标题、描述、关键词等元信息
-* **阅读时间估算**：智能计算页面阅读所需时间
-* **图片和链接统计**：分析页面媒体资源和外链情况
-* **语言检测**：自动识别页面主要语言
-
-### 🔄 无缝同步与备份
-
-* **实时同步**：与Chrome浏览器书签系统完美同步
-* **跨设备访问**：支持多设备间的书签同步
-* **数据备份**：支持导出/导入功能，保护您的数据安全
-* **冲突解决**：智能处理同步冲突，确保数据一致性
-
-### 🎨 现代化界面设计
-
-* **响应式设计**：完美适配不同屏幕尺寸
-* **深色模式**：支持浅色/深色/自动主题切换
-* **动画效果**：流畅的交互动画，提升用户体验
-* **通知系统**：优雅的消息提示和状态反馈
-
-### 🔒 隐私与安全
-
-* **本地存储**：所有数据存储在本地浏览器中
-* **无外部依赖**：不向任何外部服务器发送数据
-* **权限最小化**：仅请求必要的浏览器权限
-* **数据加密**：敏感信息采用加密存储
-
-## 🎨 设计理念
-
-采用现代化的**Material Design**设计语言，结合**玻璃拟态效果**和**深色模式**，为您带来优雅、直观且富有科技感的视觉体验。界面设计注重可用性和美观性的平衡，确保在提供强大功能的同时保持简洁易用。
-
-## 🛠️ 安装方法
-
-### 开发者模式安装
-
-1. **下载项目**：克隆仓库或下载压缩包并解压
-
-   ```bash
-   git clone https://github.com/your-username/CogniMark.git
-   ```
-2. **打开扩展管理页面**：在Chrome地址栏输入 `chrome://extensions/`
-3. **启用开发者模式**：点击页面右上角的"开发者模式"开关
-4. **加载扩展**：点击"加载已解压的扩展程序"按钮
-5. **选择目录**：选择项目中的 `src` 文件夹
-6. **完成安装**：CogniMark 图标将出现在浏览器工具栏中
-
-### 快捷键
-
-- **Ctrl+Shift+B** (Windows/Linux) 或 **Cmd+Shift+B** (Mac)：快速打开 CogniMark
-
-## 📁 项目结构
-
-```
-CogniMark/
-├── src/                    # 扩展源代码
-│   ├── manifest.json       # 扩展配置文件
-│   ├── popup.html          # 弹窗界面
-│   ├── popup.css           # 弹窗样式
-│   ├── popup.js            # 弹窗逻辑
-│   ├── background.js       # 后台服务脚本
-│   ├── content.js          # 内容脚本
-│   ├── options.html        # 设置页面
-│   ├── options.css         # 设置页面样式
-│   ├── options.js          # 设置页面逻辑
-│   └── icons/              # 图标资源
-│       ├── icon16.svg      # 16x16 图标
-│       ├── icon32.svg      # 32x32 图标
-│       ├── icon48.svg      # 48x48 图标
-│       └── icon128.svg     # 128x128 图标
-├── test.html               # 功能测试页面
-├── README.md               # 项目说明文档
-├── LICENSE                 # 开源协议
-└── .gitignore             # Git忽略文件
-```
-
-## 🏗️ 技术架构
-
-### 核心组件
-
-- **Manifest V3**：使用最新的Chrome扩展API
-- **Service Worker**：后台服务，处理书签同步和健康检查
-- **Content Scripts**：页面内容分析和浮动按钮
-- **Popup Interface**：主要用户交互界面
-- **Options Page**：扩展设置和配置管理
-
-### 数据存储
-
-- **chrome.storage.sync**：用户设置和配置同步
-- **chrome.storage.local**：书签数据和统计信息
-- **chrome.bookmarks**：与浏览器书签系统集成
-
-### 权限说明
-
-- **bookmarks**：读取和管理浏览器书签
-- **storage**：存储扩展数据和设置
-- **alarms**：定时任务和后台检查
-- **scripting**：注入内容脚本进行页面分析
-- **host_permissions**：访问网页内容进行分析
-
-## 🚀 功能特性详解
-
-### 智能搜索系统
-
-- 支持模糊搜索和精确匹配
-- 实时搜索结果高亮显示
-- 搜索历史记录和快速重复查询
-- 高级搜索选项和过滤器
-
-### 书签健康监控
-
-- 定期检查链接有效性
-- 智能重试机制处理临时故障
-- 详细的状态报告和修复建议
-- 批量操作支持
-
-### 页面内容分析
-
-- 自动提取页面元数据
-- 智能关键词识别
-- 内容分类和标签建议
-- 阅读时间和复杂度评估
-
-### 使用统计分析
-
-- 点击频率追踪
-- 使用模式分析
-- 个性化推荐
-- 数据可视化展示
-
-## ⚙️ 设置选项
-
-### 常规设置
-
-- 最大书签数量限制
-- 自动清理失效书签
-- 重复书签检测
-- 页面分析开关
-
-### 同步设置
-
-- 同步间隔配置
-- 启动时自动同步
-- 冲突解决策略
-- 健康检查频率
-
-### 外观设置
-
-- 主题选择（浅色/深色/自动）
-- 主题色自定义
-- 紧凑模式
-- 动画效果开关
-
-### 高级设置
-
-- 缓存大小配置
-- 后台同步开关
-- 调试模式
-- 数据导入导出
-
-## 🧪 测试指南
-
-1. **打开测试页面**：访问 `test.html` 查看功能演示
-2. **添加测试书签**：使用提供的测试链接
-3. **验证搜索功能**：测试各种搜索场景
-4. **检查健康状态**：验证链接检查功能
-5. **测试同步功能**：确认数据同步正常
-
-## 🔧 开发指南
-
-### 本地开发
-
-```bash
-# 克隆项目
-git clone https://github.com/your-username/CogniMark.git
-cd CogniMark
-
-# 在Chrome中加载扩展
-# 1. 打开 chrome://extensions/
-# 2. 启用开发者模式
-# 3. 加载 src 文件夹
-```
-
-### 代码规范
-
-- 使用ES6+语法
-- 遵循Google JavaScript风格指南
-- 添加详细的中文注释
-- 使用语义化的变量和函数命名
-
-### 调试技巧
-
-- 使用Chrome DevTools调试
-- 启用扩展的调试模式
-- 查看后台页面控制台
-- 使用chrome://extensions/查看错误
-
-## 📈 性能优化
-
-- **懒加载**：按需加载书签数据
-- **缓存机制**：智能缓存常用数据
-- **防抖处理**：优化搜索和同步操作
-- **内存管理**：及时清理不需要的数据
-
-## 🔒 隐私保护
-
-- 所有数据本地存储，不上传到服务器
-- 最小权限原则，仅请求必要权限
-- 用户数据加密存储
-- 支持完全离线使用
-
-## 🤝 贡献指南
-
-欢迎提交Issue和Pull Request！
-
-1. Fork 项目
-2. 创建功能分支
-3. 提交更改
-4. 推送到分支
-5. 创建Pull Request
-
-## 📄 开源协议
-
-本项目采用 [MIT License](LICENSE) 开源协议。
-
-## 🙏 致谢
-
-**CogniMark** - 让书签管理更智能，让知识获取更高效！ 🚀
+# QR-ify 🚀
+
+QR-ify is a simple and powerful Chrome extension that allows you to instantly generate QR codes from any content. Whether it's the current webpage URL or custom text, QR-ify makes it easy to create, copy, and download QR codes on the fly.
+
+The name "QR-ify" comes from the idea of instantly turning anything into a QR code.
+
+## ✨ Features
+
+- **Instant URL to QR Code**: Automatically generates a QR code for the current page's URL when you open the extension.
+- **Custom Text Support**: Switch to the "Custom Content" tab to type or paste any text and generate a QR code for it.
+- **Real-time Generation**: The QR code for custom text is generated as you type.
+- **Customizable Options**:
+  - **Size**: Adjust the size of the QR code (in pixels).
+  - **Error Correction**: Choose from four levels of error correction (Low, Medium, High, Highest) to ensure scannability.
+- **Easy Actions**:
+  - **Copy to Clipboard**: Copy the generated QR code image to your clipboard with a single click.
+  - **Download as PNG**: Download the QR code as a high-quality PNG file.
+- **Modern UI**: A clean, beautiful, and easy-to-use card-style interface.
+
+## 🛠️ How to Use
+
+1.  **Install the Extension**: Follow the installation steps below.
+2.  **Click the Icon**: Click the QR-ify icon in your Chrome toolbar.
+3.  **Generate for URL**: By default, you will see the QR code for the current page.
+4.  **Generate for Custom Text**:
+    - Click the "Custom Content" (自定义内容) tab.
+    - Type or paste your desired text into the text area.
+    - Adjust the size and error correction level if needed. The QR code will update automatically.
+5.  **Copy or Download**: Use the "Copy Image" (复制图片) or "Download PNG" (下载 PNG) buttons at the bottom.
+
+## ⚙️ Installation for Development
+
+To install and test the extension locally:
+
+1.  **Download the Code**: Clone this repository or download it as a ZIP file and unzip it.
+    ```bash
+    git clone <repository-url>
+    ```
+2.  **Open Chrome Extensions**: Navigate to `chrome://extensions` in your Chrome browser.
+3.  **Enable Developer Mode**: Turn on the "Developer mode" toggle, usually found in the top-right corner.
+4.  **Load the Extension**:
+    - Click the "Load unpacked" button.
+    - Select the directory where you cloned or unzipped the project files.
+5.  **Done!**: The QR-ify icon will appear in your browser's toolbar.
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).

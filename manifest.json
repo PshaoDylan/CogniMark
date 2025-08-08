@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "二维码生成器",
+  "name": "QR-ify",
   "version": "1.0",
   "description": "将任意内容生成二维码。",
   "permissions": [
