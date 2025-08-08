@@ -48,6 +48,14 @@ body {
   color: var(--text-color);
 }
 
+.card-header .subtitle {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--text-color-light);
+}
+
 .card-body {
   padding: 1.25rem;
 }
@@ -126,7 +134,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 180px; /* Adjusted size */
+  min-height: 160px; /* Adjusted size */
 }
 
 .input-area {
