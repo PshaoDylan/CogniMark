@@ -1,20 +1,40 @@
-<svg width="48" height="48" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="28" fill="white"/>
-  <g clip-path="url(#clip0_101_2)">
-    <rect x="22" y="22" width="84" height="84" rx="12" fill="#F4F5F7"/>
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M44 33H33V44H44V33ZM38.5 38.5V38.51H38.5V38.5Z" fill="#212529"/>
-    <path d="M55 33H66V44H55V33Z" fill="#212529"/>
-    <path d="M77 33H88V44H77V33Z" fill="#212529"/>
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M44 55H33V66H44V55ZM38.5 60.5V60.51H38.5V60.5Z" fill="#212529"/>
-    <path d="M55 55H66V66H55V55Z" fill="#6C757D"/>
-    <path d="M77 55H88V66H77V55Z" fill="#212529"/>
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M44 77H33V88H44V77ZM38.5 82.5V82.51H38.5V82.5Z" fill="#212529"/>
-    <path d="M55 77H66V88H55V77Z" fill="#212529"/>
-    <path d="M77 77H88V88H77V77Z" fill="#6C757D"/>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <title>QR Share - 48px</title>
+  <desc>QR code motif with circular conversion arrow and link symbol.</desc>
   <defs>
-    <clipPath id="clip0_101_2">
-      <rect x="22" y="22" width="84" height="84" rx="12" fill="white"/>
-    </clipPath>
+    <linearGradient id="g48" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <style>
+      .bg{fill:#0B1220;}
+      .qr{fill:#ffffff;}
+      .acc{fill:url(#g48);}
+      .st{stroke:url(#g48);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;}
+    </style>
   </defs>
+  <rect x="2" y="2" width="44" height="44" rx="10" class="bg"/>
+  <g transform="translate(8,8)">
+    <g class="qr">
+      <rect x="0" y="0" width="10" height="10" rx="2"/>
+      <rect x="0" y="22" width="10" height="10" rx="2"/>
+      <rect x="22" y="0" width="10" height="10" rx="2"/>
+      <rect x="2" y="2" width="6" height="6" rx="1" class="acc"/>
+      <rect x="2" y="24" width="6" height="6" rx="1" class="acc"/>
+      <rect x="24" y="2" width="6" height="6" rx="1" class="acc"/>
+    </g>
+    <rect x="14" y="14" width="4" height="4" class="qr"/>
+    <rect x="20" y="14" width="4" height="4" class="qr"/>
+    <rect x="14" y="20" width="4" height="4" class="qr"/>
+    <rect x="26" y="20" width="4" height="4" class="qr"/>
+  </g>
+  <path d="M33 32a9 9 0 1 1 2.5-6.2" class="st"/>
+  <path d="M33 32h-6" class="st"/>
+  <path d="M35.5 26l-2.5 6-6-2.5" class="st"/>
+  <g transform="translate(26,34)">
+    <path d="M0 4a4 4 0 0 1 4-4h3" class="st"/>
+    <path d="M22 4a4 4 0 0 1-4 4h-3" class="st"/>
+    <path d="M7 2h10" class="st"/>
+  </g>
 </svg>
