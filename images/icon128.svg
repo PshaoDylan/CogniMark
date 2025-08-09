@@ -1,49 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-  <title>QR Share - 128px</title>
-  <desc>Detailed icon: QR grid with gradient accents, orbiting convert arrow, and link.</desc>
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="28" fill="white"/>
+  <g clip-path="url(#clip0_101_2)">
+    <rect x="22" y="22" width="84" height="84" rx="12" fill="#F4F5F7"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M44 33H33V44H44V33ZM38.5 38.5V38.51H38.5V38.5Z" fill="#212529"/>
+    <path d="M55 33H66V44H55V33Z" fill="#212529"/>
+    <path d="M77 33H88V44H77V33Z" fill="#212529"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M44 55H33V66H44V55ZM38.5 60.5V60.51H38.5V60.5Z" fill="#212529"/>
+    <path d="M55 55H66V66H55V55Z" fill="#6C757D"/>
+    <path d="M77 55H88V66H77V55Z" fill="#212529"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M44 77H33V88H44V77ZM38.5 82.5V82.51H38.5V82.5Z" fill="#212529"/>
+    <path d="M55 77H66V88H55V77Z" fill="#212529"/>
+    <path d="M77 77H88V88H77V77Z" fill="#6C757D"/>
+  </g>
   <defs>
-    <linearGradient id="g128" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0EA5E9"/>
-      <stop offset="100%" stop-color="#6366F1"/>
-    </linearGradient>
-    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
-      <feOffset dx="0" dy="1" result="offset"/>
-      <feMerge>
-        <feMergeNode in="offset"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <style>
-      .bg{fill:#0B1220;}
-      .qr{fill:#ffffff;}
-      .acc{fill:url(#g128);}
-      .st{stroke:url(#g128);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;fill:none;filter:url(#soft);}
-    </style>
+    <clipPath id="clip0_101_2">
+      <rect x="22" y="22" width="84" height="84" rx="12" fill="white"/>
+    </clipPath>
   </defs>
-  <rect x="6" y="6" width="116" height="116" rx="24" class="bg"/>
-  <g transform="translate(16,16)">
-    <g class="qr">
-      <rect x="0" y="0" width="28" height="28" rx="6"/>
-      <rect x="0" y="68" width="28" height="28" rx="6"/>
-      <rect x="68" y="0" width="28" height="28" rx="6"/>
-      <rect x="4" y="4" width="20" height="20" rx="4" class="acc"/>
-      <rect x="4" y="72" width="20" height="20" rx="4" class="acc"/>
-      <rect x="72" y="4" width="20" height="20" rx="4" class="acc"/>
-    </g>
-    <rect x="36" y="36" width="10" height="10" class="qr"/>
-    <rect x="50" y="36" width="10" height="10" class="qr"/>
-    <rect x="36" y="50" width="10" height="10" class="qr"/>
-    <rect x="64" y="56" width="10" height="10" class="qr"/>
-    <rect x="56" y="64" width="10" height="10" class="qr"/>
-  </g>
-  <path d="M90 88a30 30 0 1 1 8-20.5" class="st"/>
-  <path d="M90 88H68" class="st"/>
-  <path d="M96 68l-6 20-20-6" class="st"/>
-  <g transform="translate(62,94)">
-    <path d="M0 10a10 10 0 0 1 10-10h10" class="st"/>
-    <path d="M56 10a10 10 0 0 1-10 10H36" class="st"/>
-    <path d="M22 6h20" class="st"/>
-  </g>
 </svg>
