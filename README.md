@@ -43,6 +43,22 @@ QR-ify 是一个简洁而强大的 Chrome 扩展程序，可以让你轻松地�
     - 选择你克隆或解压的项目文件所在的目录。
 5.  **完成**：QR-ify 的图标将会出现在你的浏览器工具栏中。
 
+## 📁 项目结构
+
+```
+QR-ify/
+├── images/
+│   ├── icon16.svg      # 16x16 浏览器工具栏图标
+│   ├── icon48.svg      # 48x48 扩展管理页图标
+│   └── icon128.svg     # 128x128 主图标
+├── manifest.json       # 扩展程序的配置文件 (核心)
+├── popup.html          # 插件的弹出界面 (HTML结构)
+├── popup.css           # 弹出界面的样式文件 (CSS)
+├── popup.js            # 弹出界面的交互逻辑 (JavaScript)
+├── qrcode.min.js       # 第三方二维码生成库
+└── README.md           # 项目说明文档
+```
+
 ## 📄 开源协议
 
 本项目基于 [MIT 许可证](LICENSE) 开源。
