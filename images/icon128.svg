@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <title>QR Share - 128px</title>
+  <desc>Detailed icon: QR grid with gradient accents, orbiting convert arrow, and link.</desc>
+  <defs>
+    <linearGradient id="g128" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+      <feOffset dx="0" dy="1" result="offset"/>
+      <feMerge>
+        <feMergeNode in="offset"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .bg{fill:#0B1220;}
+      .qr{fill:#ffffff;}
+      .acc{fill:url(#g128);}
+      .st{stroke:url(#g128);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;fill:none;filter:url(#soft);}
+    </style>
+  </defs>
+  <rect x="6" y="6" width="116" height="116" rx="24" class="bg"/>
+  <g transform="translate(16,16)">
+    <g class="qr">
+      <rect x="0" y="0" width="28" height="28" rx="6"/>
+      <rect x="0" y="68" width="28" height="28" rx="6"/>
+      <rect x="68" y="0" width="28" height="28" rx="6"/>
+      <rect x="4" y="4" width="20" height="20" rx="4" class="acc"/>
+      <rect x="4" y="72" width="20" height="20" rx="4" class="acc"/>
+      <rect x="72" y="4" width="20" height="20" rx="4" class="acc"/>
+    </g>
+    <rect x="36" y="36" width="10" height="10" class="qr"/>
+    <rect x="50" y="36" width="10" height="10" class="qr"/>
+    <rect x="36" y="50" width="10" height="10" class="qr"/>
+    <rect x="64" y="56" width="10" height="10" class="qr"/>
+    <rect x="56" y="64" width="10" height="10" class="qr"/>
+  </g>
+  <path d="M90 88a30 30 0 1 1 8-20.5" class="st"/>
+  <path d="M90 88H68" class="st"/>
+  <path d="M96 68l-6 20-20-6" class="st"/>
+  <g transform="translate(62,94)">
+    <path d="M0 10a10 10 0 0 1 10-10h10" class="st"/>
+    <path d="M56 10a10 10 0 0 1-10 10H36" class="st"/>
+    <path d="M22 6h20" class="st"/>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>QR-ify</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+  <div class="card">
+    <header class="card-header">
+      <h1>QR-ify</h1>
+      <p class="subtitle">即时（-ify）转换为二维码</p>
+    </header>
+<main class="card-body bento-grid">
+      <div class="bento-item tabs">
+        <button class="tab-button active" data-tab="tab-url">当前页面</button>
+        <button class="tab-button" data-tab="tab-custom">自定义内容</button>
+      </div>
+
+      <!-- Tab for Current Page URL -->
+      <div id="tab-url" class="bento-item qr-display tab-content active">
+        <div id="qrcode-url" class="qrcode-container"></div>
+        <p>当前页面链接的二维码</p>
+      </div>
+
+      <!-- Tab for Custom Content -->
+      <div id="tab-custom" class="tab-content">
+        <div class="bento-item input-area">
+            <textarea id="custom-text" placeholder="在此输入任何文本或链接..."></textarea>
+        </div>
+        <div class="bento-item settings">
+            <div class="form-group">
+              <label for="qr-size">尺寸</label>
+              <input type="number" id="qr-size" value="128" min="100" max="500" step="10">
+            </div>
+            <div class="form-group">
+              <label for="qr-level">纠错</label>
+              <select id="qr-level">
+                <option value="L">低</option>
+                <option value="M" selected>中</option>
+                <option value="Q">较高</option>
+                <option value="H">高</option>
+              </select>
+            </div>
+        </div>
+        <div class="bento-item qr-display">
+            <div id="qrcode-custom" class="qrcode-container"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="card-footer">
+      <button id="copy-btn" class="button-primary">复制图片</button>
+      <button id="download-btn" class="button-secondary">下载 PNG</button>
+    </footer>
+  </div>
+
+  <script src="qrcode.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
